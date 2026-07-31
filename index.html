@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en" data-mode="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#176b67">
+  <meta name="description" content="Velora Health Institute is a fictional premium hospital and diagnostics website concept by AJAYNXT with doctor search, appointments, departments, health packages, reports and locations.">
+  <meta name="keywords" content="hospital website demo, doctor appointment website, diagnostics website, multispeciality hospital website, AJAYNXT">
+  <meta name="author" content="Ajay Saini">
+  <meta name="creator" content="AJAYNXT">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://health.ajaynxt.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Velora Health Institute | AJAYNXT Demo">
+  <meta property="og:description" content="An original fictional hospital and diagnostics website concept designed by AJAYNXT.">
+  <meta property="og:url" content="https://health.ajaynxt.com/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=88">
+  <meta property="og:site_name" content="AJAYNXT Portfolio">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <title>Velora Health Institute | Hospital Website Demo by AJAYNXT</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://ajaynxt.com/#organization",
+        "name":"AJAYNXT",
+        "url":"https://ajaynxt.com/",
+        "telephone":"+91-99295-62585",
+        "email":"ajayx3neha@gmail.com",
+        "sameAs":["https://www.instagram.com/ajay_nxt_/"]
+      },
+      {
+        "@type":"Person",
+        "@id":"https://ajaynxt.com/#ajay-saini",
+        "name":"Ajay Saini",
+        "jobTitle":"Website Designer and Developer",
+        "url":"https://ajaynxt.com/",
+        "worksFor":{"@id":"https://ajaynxt.com/#organization"}
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://health.ajaynxt.com/#website",
+        "url":"https://health.ajaynxt.com/",
+        "name":"Velora Health Institute Demo",
+        "creator":{"@id":"https://ajaynxt.com/#ajay-saini"},
+        "publisher":{"@id":"https://ajaynxt.com/#organization"}
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="demo-strip" role="note">
+    <span>THIS IS NOT AN OFFICIAL HOSPITAL OR MEDICAL SERVICE WEBSITE</span>
+    <i aria-hidden="true"></i>
+    <strong>FICTIONAL DEMO DESIGNED BY AJAYNXT</strong>
+    <a href="https://ajaynxt.com/" target="_blank" rel="noopener">AJAYNXT.COM</a>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Velora Health Institute home">
+      <img src="assets/logo-mark.svg" alt="" width="48" height="48">
+      <span>
+        <strong>VELORA HEALTH</strong>
+        <small>HOSPITAL · DIAGNOSTICS · CONTINUING CARE</small>
+      </span>
+    </a>
+
+    <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><b>Menu</b>
+    </button>
+
+    <nav id="mainNav" aria-label="Primary navigation">
+      <a href="#departments">Departments</a>
+      <a href="#doctors">Doctors</a>
+      <a href="#checks">Health Checks</a>
+      <a href="#diagnostics">Diagnostics</a>
+      <a href="#locations">Locations</a>
+      <a href="#international">International</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="outline-action" type="button" data-open-report>View Reports</button>
+      <button class="accent-action" type="button" data-open-appointment>Book Appointment</button>
+    </div>
+  </header>
+
+  <aside class="customizer" aria-label="Website appearance controls">
+    <button class="customizer-toggle" id="customizerToggle" type="button" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10M14 4v6M6 14v6"/></svg>
+      Customize
+    </button>
+
+    <div class="customizer-panel">
+      <div class="customizer-head">
+        <div><small>AJAYNXT STYLE LAB</small><h2>Adjust the calm.</h2></div>
+        <button id="customizerClose" type="button" aria-label="Close customizer">×</button>
+      </div>
+
+      <section>
+        <div class="control-title"><h3>Colour Theme</h3><span id="colourStatus">Auto · 3 sec</span></div>
+        <div class="swatches" id="themeSwatches"></div>
+        <label>Unlimited custom colour
+          <div class="colour-row">
+            <input id="customColour" type="color" value="#176b67" aria-label="Choose custom colour">
+            <input id="customHex" type="text" value="#176B67" maxlength="7" aria-label="Enter HEX colour">
+          </div>
+        </label>
+        <button class="lock-button" id="lockColour" type="button"><span>Lock Colour</span><b>Unlocked</b></button>
+      </section>
+
+      <section>
+        <div class="control-title"><h3>Luxury Font</h3><span id="fontStatus">Auto · 3 sec</span></div>
+        <label>Manual heading font
+          <select id="fontSelect">
+            <option value="Manrope">Manrope</option>
+            <option value="Cormorant Garamond">Cormorant Garamond</option>
+            <option value="Playfair Display">Playfair Display</option>
+            <option value="Bodoni Moda">Bodoni Moda</option>
+            <option value="DM Serif Display">DM Serif Display</option>
+            <option value="Prata">Prata</option>
+          </select>
+        </label>
+        <button class="lock-button" id="lockFont" type="button"><span>Lock Font</span><b>Unlocked</b></button>
+      </section>
+
+      <section>
+        <div class="control-title"><h3>Appearance</h3><span id="modeStatus">Light</span></div>
+        <div class="mode-grid">
+          <button class="active" type="button" data-mode-value="light">Light</button>
+          <button type="button" data-mode-value="dark">Dark</button>
+          <button type="button" data-mode-value="system">System</button>
+        </div>
+      </section>
+
+      <button class="master-lock" id="lockBoth" type="button">Lock Both</button>
+      <button class="reset-button" id="resetCustomizer" type="button">Reset Auto Mode</button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="hero-media" role="img" aria-label="Modern medical team in a bright premium hospital"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-copy">
+        <p class="eyebrow light">MULTI-SPECIALITY · DIAGNOSTICS · PREVENTIVE CARE</p>
+        <h1>Care begins<br>with clarity.</h1>
+        <p>Find the right speciality, understand the next step and book a consultation through one calm, connected patient journey.</p>
+        <div class="hero-actions">
+          <button class="button button-accent" type="button" data-open-appointment>Book an Appointment</button>
+          <a class="button button-outline" href="#doctors">Find a Doctor</a>
+        </div>
+      </div>
+
+      <form class="care-search" id="careSearch">
+        <label>Search care
+          <input id="careQuery" type="search" placeholder="Doctor, speciality or service">
+        </label>
+        <label>Speciality
+          <select id="careSpeciality">
+            <option value="Any Speciality">Any Speciality</option>
+            <option>Cardiology</option>
+            <option>Orthopaedics</option>
+            <option>Neurology</option>
+            <option>Women & Child</option>
+            <option>Gastroenterology</option>
+            <option>Oncology</option>
+          </select>
+        </label>
+        <label>Location
+          <select id="careLocation">
+            <option>Any Velora Location</option>
+            <option>Jaipur</option>
+            <option>Gurugram</option>
+            <option>Shimla</option>
+          </select>
+        </label>
+        <button type="submit">Search Demo Care</button>
+      </form>
+
+      <div class="emergency-card">
+        <strong>Medical emergency?</strong>
+        <p>This portfolio demo does not provide emergency support. Contact your local emergency services or nearest verified hospital.</p>
+      </div>
+    </section>
+
+    <section class="quick-actions">
+      <button type="button" data-open-appointment>
+        <svg viewBox="0 0 32 32"><path d="M7 6h18v21H7zM11 3v8M21 3v8M11 15h10M11 20h7"/></svg>
+        <span><small>CONSULTATION</small><strong>Book Appointment</strong></span>
+      </button>
+      <a href="#doctors">
+        <svg viewBox="0 0 32 32"><circle cx="16" cy="10" r="5"/><path d="M7 27c1-7 5-11 9-11s8 4 9 11"/></svg>
+        <span><small>MEDICAL TEAM</small><strong>Find a Doctor</strong></span>
+      </a>
+      <a href="#checks">
+        <svg viewBox="0 0 32 32"><path d="M8 5h16v22H8zM12 11h8M12 16h3M18 16h2M12 21h8"/></svg>
+        <span><small>PREVENTIVE CARE</small><strong>Health Check Packages</strong></span>
+      </a>
+      <button type="button" data-open-report>
+        <svg viewBox="0 0 32 32"><path d="M8 4h11l5 5v19H8zM19 4v6h6M12 16h8M12 21h8"/></svg>
+        <span><small>DIAGNOSTIC ACCESS</small><strong>View Reports Demo</strong></span>
+      </button>
+    </section>
+
+    <section class="intro section">
+      <div class="section-index reveal"><span>01</span><p>THE CARE JOURNEY</p></div>
+      <div class="intro-heading reveal"><h2>Complex medicine.<br>Clear next steps.</h2></div>
+      <div class="intro-copy reveal">
+        <p>Velora Health Institute is an original fictional hospital brand created for the AJAYNXT portfolio. It demonstrates how appointments, departments, doctors, diagnostics, health checks and locations can work as one patient experience.</p>
+        <p>All doctors, credentials, packages, prices, hospitals, technology and medical claims are illustrative placeholders.</p>
+        <a class="text-link" href="#departments">Explore departments <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="departments section" id="departments">
+      <header class="section-heading reveal">
+        <div><p class="eyebrow">CENTRES & DEPARTMENTS</p><h2>Start with<br>the care you need.</h2></div>
+        <p>Speciality filters and clear service summaries reduce uncertainty before a patient selects a doctor or hospital.</p>
+      </header>
+
+      <div class="department-filters reveal">
+        <button class="active" type="button" data-dept-filter="All">All</button>
+        <button type="button" data-dept-filter="Heart">Heart</button>
+        <button type="button" data-dept-filter="Bones">Bones & Joints</button>
+        <button type="button" data-dept-filter="Brain">Brain & Spine</button>
+        <button type="button" data-dept-filter="Cancer">Cancer Care</button>
+        <button type="button" data-dept-filter="Women">Women & Child</button>
+      </div>
+
+      <div class="department-grid">
+        <article class="department-card reveal" data-dept="Heart">
+          <svg viewBox="0 0 48 48"><path d="M24 39S8 30 8 18a8 8 0 0 1 15-4 8 8 0 0 1 17 4c0 12-16 21-16 21Z"/><path d="M13 24h7l3-7 4 14 3-7h5"/></svg>
+          <small>CENTRE FOR HEART CARE</small><h3>Cardiology</h3><p>Consultation, diagnostics, procedures and rehabilitation content areas.</p>
+          <button type="button" data-department="Cardiology">Find Care</button>
+        </article>
+        <article class="department-card reveal" data-dept="Bones">
+          <svg viewBox="0 0 48 48"><path d="M13 12c-5-4-9 4-4 7l18 18c3 5 11 1 7-4M35 36c5 4 9-4 4-7L21 11c-3-5-11-1-7 4"/></svg>
+          <small>BONES, JOINTS & SPORTS</small><h3>Orthopaedics</h3><p>Joint, spine, trauma, sports injury and recovery pathways.</p>
+          <button type="button" data-department="Orthopaedics">Find Care</button>
+        </article>
+        <article class="department-card reveal" data-dept="Brain">
+          <svg viewBox="0 0 48 48"><path d="M18 38c-7-1-9-9-5-13-5-5-1-13 5-13 3-7 13-5 14 1 7-1 10 8 6 12 4 5 0 13-6 13"/><path d="M24 10v28M18 17h6M24 25h8M16 31h8"/></svg>
+          <small>BRAIN, NERVES & SPINE</small><h3>Neurosciences</h3><p>Neurology, neurosurgery, stroke and spine-care content areas.</p>
+          <button type="button" data-department="Neurology">Find Care</button>
+        </article>
+        <article class="department-card reveal" data-dept="Cancer">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="15"/><path d="M18 24c0-7 5-12 12-12M30 36c-7 0-12-5-12-12M17 17l14 14"/></svg>
+          <small>INTEGRATED CANCER CARE</small><h3>Oncology</h3><p>Medical, surgical and radiation oncology journey placeholders.</p>
+          <button type="button" data-department="Oncology">Find Care</button>
+        </article>
+        <article class="department-card reveal" data-dept="Women">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="18" r="10"/><path d="M24 28v14M17 35h14"/></svg>
+          <small>WOMEN & CHILD</small><h3>Mother & Child</h3><p>Women’s health, maternity, neonatology and paediatrics.</p>
+          <button type="button" data-department="Women & Child">Find Care</button>
+        </article>
+        <article class="department-card reveal" data-dept="All">
+          <svg viewBox="0 0 48 48"><path d="M24 7v34M7 24h34"/><circle cx="24" cy="24" r="17"/></svg>
+          <small>COORDINATED SPECIALITIES</small><h3>Internal Medicine</h3><p>General consultation, chronic-care coordination and referrals.</p>
+          <button type="button" data-department="Internal Medicine">Find Care</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="doctors section" id="doctors">
+      <header class="section-heading reveal">
+        <div><p class="eyebrow">FIND A DOCTOR</p><h2>Meet the team<br>behind the next step.</h2></div>
+        <p>Every doctor profile below is fictional. A real website must verify qualifications, registration, experience and availability.</p>
+      </header>
+
+      <div class="doctor-toolbar reveal">
+        <label>Search fictional doctor<input id="doctorSearch" type="search" placeholder="Name or speciality"></label>
+        <label>Speciality
+          <select id="doctorSpeciality">
+            <option value="All">All Specialities</option>
+            <option>Cardiology</option><option>Orthopaedics</option><option>Neurology</option><option>Oncology</option><option>Women & Child</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="doctor-grid">
+        <article class="doctor-card reveal" data-doctor-speciality="Cardiology" data-doctor-keywords="dr aarya mehta cardiology heart interventional">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=86" alt="Fictional doctor profile portrait" loading="lazy">
+          <div><small>CARDIOLOGY · FICTIONAL</small><h3>Dr. Aarya Mehta</h3><p>Consultant, Interventional Cardiology</p><span>Demo experience: 16 years</span><button type="button" data-doctor="Dr. Aarya Mehta" data-speciality="Cardiology" data-image="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=90">View Profile</button></div>
+        </article>
+        <article class="doctor-card reveal" data-doctor-speciality="Orthopaedics" data-doctor-keywords="dr kabir arora orthopaedics joint replacement sports">
+          <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=800&q=86" alt="Fictional doctor profile portrait" loading="lazy">
+          <div><small>ORTHOPAEDICS · FICTIONAL</small><h3>Dr. Kabir Arora</h3><p>Consultant, Joint & Sports Care</p><span>Demo experience: 14 years</span><button type="button" data-doctor="Dr. Kabir Arora" data-speciality="Orthopaedics" data-image="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=1200&q=90">View Profile</button></div>
+        </article>
+        <article class="doctor-card reveal" data-doctor-speciality="Neurology" data-doctor-keywords="dr ishita sen neurology stroke headache">
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=800&q=86" alt="Fictional doctor profile portrait" loading="lazy">
+          <div><small>NEUROLOGY · FICTIONAL</small><h3>Dr. Ishita Sen</h3><p>Consultant, Neurology & Stroke</p><span>Demo experience: 12 years</span><button type="button" data-doctor="Dr. Ishita Sen" data-speciality="Neurology" data-image="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=1200&q=90">View Profile</button></div>
+        </article>
+        <article class="doctor-card reveal" data-doctor-speciality="Women & Child" data-doctor-keywords="dr naina kapoor women child obstetrics maternity">
+          <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=800&q=86" alt="Fictional doctor profile portrait" loading="lazy">
+          <div><small>WOMEN & CHILD · FICTIONAL</small><h3>Dr. Naina Kapoor</h3><p>Consultant, Obstetrics & Gynaecology</p><span>Demo experience: 15 years</span><button type="button" data-doctor="Dr. Naina Kapoor" data-speciality="Women & Child" data-image="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=1200&q=90">View Profile</button></div>
+        </article>
+      </div>
+
+      <div class="empty-state" id="doctorEmpty" hidden><h3>No fictional doctor matches</h3><p>Try another speciality or search term.</p></div>
+    </section>
+
+    <section class="checks" id="checks">
+      <div class="checks-copy reveal">
+        <p class="eyebrow light">PREVENTIVE HEALTH CHECKS</p>
+        <h2>Make prevention<br>easier to understand.</h2>
+        <p>Packages should clearly show included tests, preparation, eligibility, exclusions, report timelines and doctor review.</p>
+
+        <div class="package-tabs">
+          <button class="active" type="button" data-package="Essential">Essential</button>
+          <button type="button" data-package="Advanced">Advanced</button>
+          <button type="button" data-package="Heart">Heart Focus</button>
+          <button type="button" data-package="Women">Women’s Wellness</button>
+        </div>
+
+        <article class="package-card">
+          <small id="packageLabel">ESSENTIAL · FICTIONAL PACKAGE</small>
+          <h3 id="packageTitle">Everyday Health Review</h3>
+          <p id="packageDescription">A demo preventive package covering common screening categories and a consultation-review placeholder.</p>
+          <div><strong id="packagePrice">₹3,499*</strong><span>Illustrative price only</span></div>
+        </article>
+
+        <button class="button button-light" type="button" data-open-check>Book Health Check Demo</button>
+      </div>
+
+      <div class="checks-image reveal">
+        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1600&q=88" alt="Modern diagnostic laboratory" loading="lazy">
+      </div>
+    </section>
+
+    <section class="diagnostics section" id="diagnostics">
+      <header class="section-heading reveal">
+        <div><p class="eyebrow">DIAGNOSTICS & REPORTS</p><h2>From test booking<br>to a clear report.</h2></div>
+        <p>Report access should be secure, privacy-aware and connected to verified patient identity. This demo stores no medical information.</p>
+      </header>
+
+      <div class="diagnostic-grid">
+        <article class="reveal"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/><path d="M24 13v22M13 24h22"/></svg><small>LAB SERVICES</small><h3>Pathology</h3><p>Test catalogue, preparation and home-collection enquiry.</p><button type="button" data-diagnostic="Pathology booking flow">Explore Flow</button></article>
+        <article class="reveal"><svg viewBox="0 0 48 48"><rect x="8" y="12" width="32" height="24"/><circle cx="24" cy="24" r="7"/><path d="M24 7v5M24 36v5"/></svg><small>IMAGING SERVICES</small><h3>Radiology</h3><p>Imaging instructions, appointment and report-delivery concept.</p><button type="button" data-diagnostic="Radiology booking flow">Explore Flow</button></article>
+        <article class="reveal"><svg viewBox="0 0 48 48"><path d="M10 35h28M14 35V13h20v22M19 20h10M19 26h10"/></svg><small>PATIENT ACCESS</small><h3>Digital Reports</h3><p>Secure-login placeholder with privacy and consent messaging.</p><button type="button" data-open-report>Open Demo</button></article>
+      </div>
+    </section>
+
+    <section class="care-path section">
+      <header class="section-heading reveal">
+        <div><p class="eyebrow">PATIENT JOURNEY</p><h2>Know what happens<br>after you book.</h2></div>
+        <p>A transparent sequence reduces anxiety and prevents missed preparation or follow-up steps.</p>
+      </header>
+
+      <div class="path-grid">
+        <article class="reveal"><span>01</span><h3>Choose Care</h3><p>Select speciality, doctor, location and consultation mode.</p></article>
+        <article class="reveal"><span>02</span><h3>Prepare</h3><p>Receive verified instructions and bring relevant records.</p></article>
+        <article class="reveal"><span>03</span><h3>Consult</h3><p>Meet the clinical team and understand the advised next step.</p></article>
+        <article class="reveal"><span>04</span><h3>Continue</h3><p>Access reports, follow-ups and approved care guidance.</p></article>
+      </div>
+    </section>
+
+    <section class="locations section" id="locations">
+      <header class="section-heading reveal">
+        <div><p class="eyebrow">VELORA LOCATIONS · DEMO</p><h2>Find care<br>closer to home.</h2></div>
+        <p>Real hospital pages can show verified departments, doctors, timings, directions, facilities and emergency availability.</p>
+      </header>
+
+      <div class="location-layout">
+        <div class="location-map reveal">
+          <div class="map-grid"></div>
+          <span class="map-pin pin-one"><img src="assets/logo-mark-light.svg" alt=""></span>
+          <span class="map-pin pin-two"><img src="assets/logo-mark-light.svg" alt=""></span>
+          <span class="map-pin pin-three"><img src="assets/logo-mark-light.svg" alt=""></span>
+          <small>FICTIONAL LOCATION MAP</small>
+        </div>
+
+        <div class="location-list reveal">
+          <label>Search demo hospital<input id="locationSearch" type="search" placeholder="City, department or service"></label>
+          <article data-location="jaipur multispeciality diagnostics emergency demo"><div><small>FLAGSHIP INSTITUTE</small><h3>Velora Jaipur</h3><p>Multi-speciality · Diagnostics · Day Care</p></div><button type="button" data-location-enquiry="Velora Jaipur">View</button></article>
+          <article data-location="gurugram speciality hospital international patient demo"><div><small>SPECIALITY HOSPITAL</small><h3>Velora Gurugram</h3><p>Speciality Care · International Desk</p></div><button type="button" data-location-enquiry="Velora Gurugram">View</button></article>
+          <article data-location="shimla clinic diagnostics consultation demo"><div><small>CITY CLINIC</small><h3>Velora Shimla</h3><p>Consultations · Diagnostics · Follow-up</p></div><button type="button" data-location-enquiry="Velora Shimla">View</button></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="international" id="international">
+      <div class="international-copy reveal">
+        <p class="eyebrow light">INTERNATIONAL PATIENTS</p>
+        <h2>Plan care before<br>the journey begins.</h2>
+        <p>A verified international-patient desk can coordinate medical-review requests, estimates, visa letters, travel, accommodation and interpreters.</p>
+        <div class="international-tags"><span>Medical Review</span><span>Travel Planning</span><span>Interpreter Support</span><span>Follow-Up</span></div>
+        <button class="button button-light" type="button" data-open-international>Send International Enquiry</button>
+      </div>
+      <div class="international-image reveal">
+        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1600&q=88" alt="Patient support consultation in a modern hospital" loading="lazy">
+      </div>
+    </section>
+
+    <section class="insurance section">
+      <header class="section-heading reveal">
+        <div><p class="eyebrow">INSURANCE & PAYMENT GUIDANCE</p><h2>Explain coverage<br>without assumptions.</h2></div>
+        <p>A real website should list verified insurers, cashless-process steps, exclusions and pre-authorisation requirements.</p>
+      </header>
+      <div class="insurance-grid">
+        <article class="reveal"><small>STEP 01</small><h3>Verify Network</h3><p>Confirm hospital, treatment and policy eligibility with the insurer.</p></article>
+        <article class="reveal"><small>STEP 02</small><h3>Prepare Documents</h3><p>Share verified identity, policy and clinical documents securely.</p></article>
+        <article class="reveal"><small>STEP 03</small><h3>Track Approval</h3><p>Present pre-authorisation status and patient-pay responsibilities clearly.</p></article>
+      </div>
+    </section>
+
+    <section class="faq section">
+      <header class="faq-heading reveal"><p class="eyebrow">FREQUENT QUESTIONS</p><h2>Clear information<br>before the visit.</h2></header>
+      <div class="faq-list reveal">
+        <article><button type="button" aria-expanded="false"><span>Are the doctors and hospitals real?</span><b>+</b></button><div><p>No. Velora Health, every doctor, credential, location, package and service is fictional portfolio content.</p></div></article>
+        <article><button type="button" aria-expanded="false"><span>Does this demo provide medical advice?</span><b>+</b></button><div><p>No. It is a website-design demonstration and does not diagnose, treat or provide emergency support.</p></div></article>
+        <article><button type="button" aria-expanded="false"><span>Can it connect to a hospital system?</span><b>+</b></button><div><p>Yes, subject to secure supported integrations, patient-consent requirements and applicable privacy rules.</p></div></article>
+        <article><button type="button" aria-expanded="false"><span>Can Velora be converted into my hospital website?</span><b>+</b></button><div><p>Yes. AJAYNXT can replace the fictional content with approved doctors, departments, locations and booking workflows.</p></div></article>
+      </div>
+    </section>
+
+    <section class="website-price section">
+      <div class="price-intro reveal">
+        <p class="eyebrow">DESIGNED BY AJAYNXT</p>
+        <h2>Need a healthcare website<br>patients can navigate?</h2>
+        <p>Get a custom hospital, clinic or diagnostics website with doctors, departments, appointments, health checks, reports, locations, international-patient enquiries and admin-ready content.</p>
+        <div class="contact-grid">
+          <a href="tel:+919929562585"><small>CALL / WHATSAPP</small><strong>+91 99295 62585</strong></a>
+          <a href="mailto:ajayx3neha@gmail.com"><small>EMAIL</small><strong>ajayx3neha@gmail.com</strong></a>
+          <a href="https://www.instagram.com/ajay_nxt_/" target="_blank" rel="noopener"><small>INSTAGRAM</small><strong>@ajay_nxt_</strong></a>
+          <a href="https://ajaynxt.com/" target="_blank" rel="noopener"><small>PORTFOLIO</small><strong>AJAYNXT.COM</strong></a>
+        </div>
+      </div>
+
+      <form class="price-form reveal" id="priceForm" novalidate>
+        <div class="form-heading"><small>HEALTHCARE WEBSITE PROJECT</small><h3>Ask website price</h3><p>Your details will open in WhatsApp.</p></div>
+        <label>Full name<input name="name" autocomplete="name" required><span class="field-error"></span></label>
+        <label>Phone / WhatsApp<input name="phone" inputmode="tel" autocomplete="tel" required><span class="field-error"></span></label>
+        <label>Hospital / Clinic name<input name="business" autocomplete="organization"></label>
+        <label>Website requirement
+          <select name="type"><option>Multi-Speciality Hospital Website</option><option>Clinic Website</option><option>Diagnostics Website</option><option>Doctor Appointment Website</option><option>Hospital Website + Admin Panel</option><option>Custom Requirement</option></select>
+        </label>
+        <label class="full">Project details<textarea name="message" rows="5" placeholder="Doctors, departments, appointments, reports, locations or other requirements"></textarea></label>
+        <button class="button button-accent full" type="submit">Ask Price on WhatsApp</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><img src="assets/logo-mark-light.svg" alt="" width="58" height="58"><strong>VELORA HEALTH</strong><small>FICTIONAL HEALTHCARE WEBSITE CONCEPT</small></div>
+    <nav class="footer-nav"><strong>EXPLORE</strong><a href="#departments">Departments</a><a href="#doctors">Doctors</a><a href="#checks">Health Checks</a><a href="#diagnostics">Diagnostics</a><a href="#locations">Locations</a></nav>
+    <div class="footer-contact"><strong>AJAYNXT</strong><a href="https://ajaynxt.com/" target="_blank" rel="noopener">ajaynxt.com</a><a href="tel:+919929562585">+91 99295 62585</a><a href="mailto:ajayx3neha@gmail.com">ajayx3neha@gmail.com</a><a href="https://www.instagram.com/ajay_nxt_/" target="_blank" rel="noopener">@ajay_nxt_</a></div>
+    <p class="footer-note">This is an AJAYNXT portfolio demo, not the official website of a real hospital or medical provider. Brand, doctors, credentials, departments, locations, appointments, packages, reports, technology, insurance and medical claims are fictional. This demo does not provide diagnosis, treatment or emergency support.</p>
+  </footer>
+
+  <div class="mobile-actions">
+    <a href="tel:+919929562585">Call</a>
+    <a href="https://wa.me/919929562585?text=Hello%20Ajay%2C%20I%20want%20a%20hospital%20website." target="_blank" rel="noopener">WhatsApp</a>
+    <button type="button" data-open-report>Reports</button>
+    <button type="button" data-open-appointment>Appointment</button>
+  </div>
+
+  <dialog class="appointment-modal" id="appointmentModal">
+    <button class="modal-close" id="appointmentClose" type="button" aria-label="Close appointment form">×</button>
+    <div class="modal-visual">
+      <img src="assets/logo-mark-light.svg" alt="">
+      <small>VELORA HEALTH · DEMO</small>
+      <h2>Choose care<br>with fewer steps.</h2>
+      <p>This fictional appointment form sends a website enquiry to AJAYNXT, not a hospital.</p>
+    </div>
+    <form class="modal-form" id="appointmentForm" novalidate>
+      <div class="form-heading"><small>APPOINTMENT · DEMO</small><h3>Book a consultation</h3></div>
+      <label>Patient name<input name="name" autocomplete="name" required><span class="field-error"></span></label>
+      <label>Phone / WhatsApp<input name="phone" inputmode="tel" autocomplete="tel" required><span class="field-error"></span></label>
+      <label>Speciality<select name="speciality" id="appointmentSpeciality"><option>Cardiology</option><option>Orthopaedics</option><option>Neurology</option><option>Oncology</option><option>Women & Child</option><option>Internal Medicine</option></select></label>
+      <label>Location<select name="location"><option>Velora Jaipur</option><option>Velora Gurugram</option><option>Velora Shimla</option></select></label>
+      <label>Preferred date<input name="date" type="date" required><span class="field-error"></span></label>
+      <label>Consultation mode<select name="mode"><option>In-Person Consultation</option><option>Video Consultation Demo</option><option>Need Care Guidance</option></select></label>
+      <label class="full">Reason for visit<textarea name="reason" rows="4" placeholder="Please avoid sharing highly sensitive medical information in this demo."></textarea></label>
+      <button class="button button-accent full" type="submit">Send Demo Enquiry on WhatsApp</button>
+    </form>
+  </dialog>
+
+  <dialog class="doctor-modal" id="doctorModal">
+    <button class="modal-close light-close" id="doctorClose" type="button" aria-label="Close doctor profile">×</button>
+    <div class="doctor-modal-media"></div>
+    <div class="doctor-modal-copy">
+      <p class="eyebrow">DOCTOR PROFILE · FICTIONAL</p>
+      <h2 id="doctorModalTitle">Doctor</h2>
+      <div class="doctor-meta"><span id="doctorModalSpeciality"></span><span>Credentials not real</span></div>
+      <p>This concept shows where verified qualification, registration, expertise, languages, hospital and appointment slots can appear.</p>
+      <button class="button button-accent" type="button" id="doctorBook">Book Demo Appointment</button>
+    </div>
+  </dialog>
+
+  <dialog class="report-modal" id="reportModal">
+    <button class="modal-close light-close" id="reportClose" type="button" aria-label="Close report access">×</button>
+    <div class="report-copy">
+      <img src="assets/logo-mark.svg" alt="" width="72" height="72">
+      <p class="eyebrow">REPORT ACCESS · DEMO</p>
+      <h2>Private by design.</h2>
+      <p>No patient data is collected or stored. A real implementation requires secure identity verification, consent, encryption and privacy controls.</p>
+      <form id="reportForm">
+        <label>Demo patient ID<input name="patient" placeholder="e.g. VH-00001"></label>
+        <label>Registered mobile<input name="mobile" inputmode="tel" placeholder="Demo only"></label>
+        <button class="button button-accent" type="submit">Discuss Secure Report Portal</button>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog class="simple-modal" id="simpleModal">
+    <button class="modal-close light-close" id="simpleClose" type="button" aria-label="Close enquiry">×</button>
+    <div class="simple-copy">
+      <img src="assets/logo-mark.svg" alt="" width="72" height="72">
+      <p class="eyebrow" id="simpleEyebrow">VELORA · DEMO</p>
+      <h2 id="simpleTitle">Healthcare website feature.</h2>
+      <p id="simpleText">This portfolio feature opens a prepared WhatsApp message.</p>
+      <a class="button button-accent" id="simpleLink" href="#" target="_blank" rel="noopener">Continue on WhatsApp</a>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

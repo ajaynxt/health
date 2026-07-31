@@ -1,0 +1,9 @@
+{
+  "name": "Velora Health Institute Demo by AJAYNXT",
+  "short_name": "Velora Health",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#EEF4F2",
+  "theme_color": "#176B67",
+  "icons": []
+}
